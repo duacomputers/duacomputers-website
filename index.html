@@ -61,14 +61,14 @@
     </div>
   </section>
 
-  <div class="cat-strip">
-    <div class="cat-pill active">All</div>
-    <div class="cat-pill">New Laptops</div>
-    <div class="cat-pill">Used Laptops</div>
-    <div class="cat-pill">Desktops</div>
-    <div class="cat-pill">Printers</div>
-    <div class="cat-pill">Monitors</div>
-    <div class="cat-pill">Accessories</div>
+  <div class="cat-strip" id="cat-strip">
+    <div class="cat-pill active" data-cat="all">All</div>
+    <div class="cat-pill" data-cat="Laptops" data-cond="New">New Laptops</div>
+    <div class="cat-pill" data-cat="Laptops" data-cond="Used">Used Laptops</div>
+    <div class="cat-pill" data-cat="Desktops">Desktops</div>
+    <div class="cat-pill" data-cat="Printers">Printers</div>
+    <div class="cat-pill" data-cat="Monitors">Monitors</div>
+    <div class="cat-pill" data-cat="Accessories">Accessories</div>
   </div>
 
   <section class="section">
@@ -134,6 +134,7 @@
   <script>
     loadCatalog().then(products => {
       renderCatalog(products, '#featured-grid', { limit: 8 });
+      wireCategoryFilter(products, '#featured-grid', '#cat-strip');
     }).catch(() => {
       document.querySelector('#featured-grid').innerHTML =
         '<div class="empty-state">Catalog is loading — if this stays empty, check the Google Sheet is published to the web.</div>';

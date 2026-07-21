@@ -105,7 +105,10 @@ function wireCategoryFilter(products, gridSelector, stripSelector) {
     strip.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
     pill.classList.add("active");
     const cat = pill.dataset.cat;
-    const filtered = cat === "all" ? products : products.filter(p => p.category === cat);
+    const cond = pill.dataset.cond;
+    let filtered = products;
+    if (cat && cat !== "all") filtered = filtered.filter(p => p.category === cat);
+    if (cond) filtered = filtered.filter(p => p.condition.toLowerCase() === cond.toLowerCase());
     renderCatalog(filtered, gridSelector);
   });
 }
