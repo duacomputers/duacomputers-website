@@ -71,7 +71,7 @@ function productCard(p) {
         <div class="card-spec">${p.spec}</div>
         <div class="card-foot">
           <div class="card-price">${p.price ? `OMR ${p.price}` : "Ask price"} <span>+VAT</span></div>
-          <a class="card-wa" href="https://wa.me/${WHATSAPP_NUMBER}?text=${waText}" target="_blank" rel="noopener">💬</a>
+          <a class="card-wa" href="https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}?text=${waText}" target="_blank" rel="noopener">💬</a>
         </div>
       </div>
     </div>`;
