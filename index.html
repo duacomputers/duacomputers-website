@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dua Computers — Laptops, PCs, Printers &amp; Repair in Ruwi, Muscat</title>
+<meta name="description" content="New and used laptops, desktops, printers and monitors in Ruwi, Muscat. Full repair and servicing on-site — laptops, PCs, PS4/PS5, printers, data recovery.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div>Computer Street, Ruwi, Muscat</div>
+    <div class="accent">+968 7703 6787 &nbsp;·&nbsp; 9:00 AM – 10:00 PM</div>
+  </div>
+
+  <header>
+    <a class="logo" href="index.html">
+      <div class="logo-mark">D_</div>
+      <div class="logo-text">DUA<span>COMPUTERS</span></div>
+    </a>
+    <nav>
+      <a href="index.html" class="current">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="repair.html">Repair</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="wa-btn" href="https://wa.me/96877036787" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">New &amp; Used · In Stock This Week</div>
+      <h1>Laptops, PCs &amp; printers — <em>sorted, priced, in stock.</em></h1>
+      <p>New and used laptops, desktops, monitors, and printers in Ruwi. Full repair and servicing on-site. Browse what's in stock, then message us directly.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="shop.html">Browse Catalog</a>
+        <a class="btn-secondary" href="repair.html">Book a Repair</a>
+      </div>
+      <div class="trust-line">
+        <div><b>New &amp; Used</b> devices</div>
+        <div><b>Ruwi</b>, Computer Street</div>
+        <div><b>All repairs</b> in-house</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="spec-tag st1">CORE I7 · 16GB<b>from OMR 250</b></div>
+      <div class="spec-tag st2">USED<b>Tested &amp; checked</b></div>
+      <div class="ground-line"></div>
+      <div class="collage">
+        <div class="device device-printer"></div>
+        <div class="device device-tower"><div class="tower-led"></div></div>
+        <div class="device device-laptop">
+          <div class="screen"></div>
+          <div class="base"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cat-strip">
+    <div class="cat-pill active">All</div>
+    <div class="cat-pill">New Laptops</div>
+    <div class="cat-pill">Used Laptops</div>
+    <div class="cat-pill">Desktops</div>
+    <div class="cat-pill">Printers</div>
+    <div class="cat-pill">Monitors</div>
+    <div class="cat-pill">Accessories</div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>In stock now</h2>
+      <a href="shop.html">View full catalog →</a>
+    </div>
+    <div class="grid" data-catalog id="featured-grid">
+      <div class="empty-state">Loading stock…</div>
+    </div>
+  </section>
+
+  <div class="repair-band">
+    <div class="repair-inner">
+      <div>
+        <h2>Repairs &amp; servicing, done on-site.</h2>
+        <p>Laptops, PCs, PS4/PS5 consoles, printers, and software issues — walk in or drop off.</p>
+        <div style="margin-top:20px;">
+          <a class="btn-secondary" style="color:#fff; border-color:rgba(255,255,255,.3);" href="repair.html">See all services →</a>
+        </div>
+      </div>
+      <div class="repair-list">
+        <div class="repair-item">Laptop repair</div>
+        <div class="repair-item">PC repair</div>
+        <div class="repair-item">PS4 &amp; PS5 servicing</div>
+        <div class="repair-item">Printer servicing</div>
+        <div class="repair-item">Data recovery</div>
+        <div class="repair-item">Software &amp; OS issues</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-band">
+    <div class="about-inner">
+      <div class="about-stat"><div class="num">Ruwi</div><div class="label">Computer Street, Muscat</div></div>
+      <div class="about-stat"><div class="num">New &amp; Used</div><div class="label">Laptops, PCs, printers &amp; more</div></div>
+      <div class="about-stat"><div class="num">Walk-in</div><div class="label">or WhatsApp — your choice</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>DUA COMPUTERS</h4>
+        <p>New &amp; used laptops, PCs, printers, monitors and accessories. Repair and servicing on-site.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <div>Computer Street, Ruwi<br>Muscat, Oman<br>9:00 AM – 10:00 PM</div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div>+968 7703 6787<br>+968 7867 3597<br>info@duacomputers.com</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 DUA COMPUTERS</div>
+      <div>duacomputers.com</div>
+    </div>
+  </footer>
+
+  <script src="assets/catalog.js"></script>
+  <script>
+    loadCatalog().then(products => {
+      renderCatalog(products, '#featured-grid', { limit: 8 });
+    }).catch(() => {
+      document.querySelector('#featured-grid').innerHTML =
+        '<div class="empty-state">Catalog is loading — if this stays empty, check the Google Sheet is published to the web.</div>';
+    });
+  </script>
+</body>
+</html>

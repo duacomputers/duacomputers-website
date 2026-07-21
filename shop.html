@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shop — Dua Computers</title>
+<meta name="description" content="Browse new and used laptops, desktops, printers, monitors and accessories in stock at Dua Computers, Ruwi.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div>Computer Street, Ruwi, Muscat</div>
+    <div class="accent">+968 7703 6787 &nbsp;·&nbsp; 9:00 AM – 10:00 PM</div>
+  </div>
+
+  <header>
+    <a class="logo" href="index.html">
+      <div class="logo-mark">D_</div>
+      <div class="logo-text">DUA<span>COMPUTERS</span></div>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="current">Shop</a>
+      <a href="repair.html">Repair</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="wa-btn" href="https://wa.me/96877036787" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+  </header>
+
+  <div class="page-head">
+    <div class="page-head-inner">
+      <h1>Shop</h1>
+      <p>Everything below is pulled straight from our current stock sheet — if it's listed here, it's available. Tap the WhatsApp icon on any item to ask about it.</p>
+    </div>
+  </div>
+
+  <div class="cat-strip" id="cat-strip">
+    <div class="cat-pill active" data-cat="all">All</div>
+    <div class="cat-pill" data-cat="Laptops">Laptops</div>
+    <div class="cat-pill" data-cat="Desktops">Desktops</div>
+    <div class="cat-pill" data-cat="Printers">Printers</div>
+    <div class="cat-pill" data-cat="Monitors">Monitors</div>
+    <div class="cat-pill" data-cat="Accessories">Accessories</div>
+  </div>
+
+  <section class="section">
+    <div class="grid" id="shop-grid">
+      <div class="empty-state">Loading stock…</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>DUA COMPUTERS</h4>
+        <p>New &amp; used laptops, PCs, printers, monitors and accessories. Repair and servicing on-site.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <div>Computer Street, Ruwi<br>Muscat, Oman<br>9:00 AM – 10:00 PM</div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div>+968 7703 6787<br>+968 7867 3597<br>info@duacomputers.com</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 DUA COMPUTERS</div>
+      <div>duacomputers.com</div>
+    </div>
+  </footer>
+
+  <script src="assets/catalog.js"></script>
+  <script>
+    loadCatalog().then(products => {
+      renderCatalog(products, '#shop-grid');
+      wireCategoryFilter(products, '#shop-grid', '#cat-strip');
+    }).catch(() => {
+      document.querySelector('#shop-grid').innerHTML =
+        '<div class="empty-state">Catalog is loading — if this stays empty, check the Google Sheet is published to the web.</div>';
+    });
+  </script>
+</body>
+</html>
