@@ -5,7 +5,7 @@
    from your sheet's URL (the long string between /d/ and /edit). */
 
 const SHEET_ID = "1ijP6lGXyXZTUhugyeHEO91PFlSMvXX9RE6TOEpf1N9c";
-const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
+const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=0`;
 const WHATSAPP_NUMBER = "96877036787";
 
 function parseCSV(text) {
