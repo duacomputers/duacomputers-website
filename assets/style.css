@@ -42,7 +42,7 @@ header{
 }
 .logo-text{font-weight:700; font-size:19px; letter-spacing:-.01em;}
 .logo-text span{color:var(--blue-deep);}
-nav{display:flex; gap:26px; font-size:14px; font-weight:500; color:var(--ink-soft); flex-wrap:wrap;}
+nav{display:flex; gap:42px; font-size:15px; font-weight:500; color:var(--ink-soft); flex-wrap:wrap;}
 nav a{text-decoration:none;}
 nav a.current{color:var(--blue-deep); font-weight:700;}
 .wa-btn{
