@@ -42,7 +42,7 @@ header{
 }
 .logo-text{font-weight:700; font-size:19px; letter-spacing:-.01em;}
 .logo-text span{color:var(--blue-deep);}
-nav{display:flex; gap:42px; font-size:15px; font-weight:500; color:var(--ink-soft); flex-wrap:wrap;}
+nav{display:flex; gap:46px; font-size:16px; font-weight:500; color:var(--ink-soft); flex-wrap:wrap;}
 nav a{text-decoration:none;}
 nav a.current{color:var(--blue-deep); font-weight:700;}
 .wa-btn{
@@ -167,6 +167,12 @@ nav a.current{color:var(--blue-deep); font-weight:700;}
   width:30px; height:30px; border-radius:7px; background:var(--green); color:#fff; text-decoration:none;
   display:flex; align-items:center; justify-content:center; font-size:14px;
 }
+.card-actions{display:flex; gap:6px;}
+.card-call{
+  width:30px; height:30px; border-radius:7px; background:var(--base); border:1px solid var(--line);
+  color:var(--ink); text-decoration:none; font-size:13px;
+  display:flex; align-items:center; justify-content:center;
+}
 .empty-state{color:var(--muted); font-size:14px; padding:40px 0; text-align:center;}
 
 /* ---- Repair band ---- */
@@ -223,3 +229,11 @@ footer{background:var(--ink); color:#B7C0D8; padding:40px 24px 20px; margin-top:
   max-width:1180px; margin:24px auto 0; padding-top:18px; border-top:1px solid rgba(255,255,255,.1);
   font-size:11.5px; color:#7C87A3; display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;
 }
+
+.phone-row{display:flex; align-items:center; gap:10px; margin-bottom:12px; flex-wrap:wrap;}
+.phone-number{font-weight:600; color:var(--ink); min-width:140px;}
+.phone-btn{
+  font-size:12.5px; font-weight:600; padding:6px 12px; border-radius:6px;
+  text-decoration:none; border:1px solid var(--line); color:var(--ink);
+}
+.phone-btn-wa{background:var(--green); color:#fff; border-color:var(--green);}

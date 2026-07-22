@@ -71,7 +71,12 @@ function productCard(p) {
         <div class="card-spec">${p.spec}</div>
         <div class="card-foot">
           <div class="card-price">${p.price ? `OMR ${p.price}` : "Ask price"} <span>+VAT</span></div>
-          <a class="card-wa" href="https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${waText}" target="_blank" rel="noopener">💬</a>
+          <div class="card-actions">
+            <a class="card-call" href="tel:+${WHATSAPP_NUMBER}" title="Call">📞</a>
+            <a class="card-wa" href="https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${waText}" target="_blank" rel="noopener" title="WhatsApp">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h0a7.94 7.94 0 0 0 7.94-7.94 7.9 7.9 0 0 0-2.39-5.64zM12.05 18.4h0a6.5 6.5 0 0 1-3.32-.91l-.24-.14-2.47.65.66-2.41-.16-.25a6.55 6.55 0 0 1 10.2-8.1 6.5 6.5 0 0 1 1.94 4.63 6.56 6.56 0 0 1-6.6 6.53zm3.6-4.9c-.2-.1-1.17-.58-1.35-.64s-.32-.1-.45.1-.5.64-.62.77-.23.15-.43.05a5.4 5.4 0 0 1-1.6-.98 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.23.3-.35.1-.11.13-.2.2-.32a.36.36 0 0 0 0-.35c-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.33-.45-.34h-.38a.74.74 0 0 0-.53.25 2.25 2.25 0 0 0-.7 1.67 3.9 3.9 0 0 0 .82 2.07 8.9 8.9 0 0 0 3.4 3 10.3 10.3 0 0 0 1.14.42 2.75 2.75 0 0 0 1.26.08c.38-.06 1.17-.48 1.34-.94a1.66 1.66 0 0 0 .11-.94c-.05-.09-.18-.14-.38-.24z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>`;
