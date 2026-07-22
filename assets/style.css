@@ -200,12 +200,13 @@ nav a.current{color:var(--blue-deep); font-weight:700;}
 
 /* ---- Generic content blocks (about/repair/contact pages) ---- */
 .content-block{max-width:1180px; margin:0 auto; padding:48px 24px;}
-.two-col{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start;}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:stretch;}
 @media (max-width:800px){ .two-col{grid-template-columns:1fr;} }
 .content-block h2{font-size:22px; font-weight:700; margin-bottom:14px;}
 .content-block p{color:var(--muted); font-size:14.5px; line-height:1.75; margin-bottom:14px;}
 .info-card{
   background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px;
+  height:100%;
 }
 .info-card h3{font-size:14px; margin-bottom:6px;}
 .info-card .val{font-size:14.5px; color:var(--muted); margin-bottom:16px;}
