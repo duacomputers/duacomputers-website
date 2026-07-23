@@ -36,7 +36,7 @@
     <div>
       <div class="eyebrow">New &amp; Used · In Stock This Week</div>
       <h1>Laptops, PCs &amp; printers — <em>sorted, priced, in stock.</em></h1>
-      <p>New and used laptops, desktops, monitors, and printers in Ruwi. Full repair and servicing on-site. Browse what's in stock, then message us directly.</p>
+      <p>Budget-friendly new and used laptops, desktops, monitors, printers, and accessories — backed by full repair and servicing, all under one roof. Sales and support that put your satisfaction first.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="shop.html">Browse Catalog</a>
         <a class="btn-secondary" href="repair.html">Book a Service</a>
@@ -47,17 +47,59 @@
         <div><b>All repairs</b> in-house</div>
       </div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual" id="hero-slideshow">
       <div class="spec-tag st1">CORE I7 · 16GB<b>from OMR 250</b></div>
       <div class="spec-tag st2">USED<b>Tested &amp; checked</b></div>
-      <div class="ground-line"></div>
-      <div class="collage">
-        <div class="device device-printer"></div>
-        <div class="device device-tower"><div class="tower-led"></div></div>
-        <div class="device device-laptop">
-          <div class="screen"></div>
-          <div class="base"></div>
+
+      <div class="slide active" data-slide="0">
+        <div class="ground-line"></div>
+        <div class="collage">
+          <div class="device device-printer"></div>
+          <div class="device device-tower"><div class="tower-led"></div></div>
+          <div class="device device-laptop">
+            <div class="screen"></div>
+            <div class="base"></div>
+          </div>
         </div>
+      </div>
+
+      <div class="slide" data-slide="1">
+        <img src="assets/photos/hero1.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 1</div>'">
+      </div>
+
+      <div class="slide" data-slide="2">
+        <img src="assets/photos/hero2.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 2</div>'">
+      </div>
+
+      <div class="slide" data-slide="3">
+        <img src="assets/photos/hero3.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 3</div>'">
+      </div>
+
+      <div class="slide" data-slide="4">
+        <img src="assets/photos/hero4.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 4</div>'">
+      </div>
+
+      <div class="slide" data-slide="5">
+        <img src="assets/photos/hero5.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 5</div>'">
+      </div>
+
+      <div class="slide" data-slide="6">
+        <img src="assets/photos/hero6.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 6</div>'">
+      </div>
+
+      <div class="slide" data-slide="7">
+        <img src="assets/photos/hero7.png" alt="Dua Computers shop" onerror="this.parentElement.innerHTML='<div class=\'slide-placeholder\'>Shop photo 7</div>'">
+      </div>
+
+      <div class="slide-dots">
+        <span class="dot active" data-dot="0"></span>
+        <span class="dot" data-dot="1"></span>
+        <span class="dot" data-dot="2"></span>
+        <span class="dot" data-dot="3"></span>
+        <span class="dot" data-dot="4"></span>
+        <span class="dot" data-dot="5"></span>
+        <span class="dot" data-dot="6"></span>
+        <span class="dot" data-dot="7"></span>
       </div>
     </div>
   </section>
@@ -141,5 +183,22 @@
         '<div class="empty-state">Catalog is loading — if this stays empty, check the Google Sheet is published to the web.</div>';
     });
   </script>
+
+  <script>
+  (function(){
+    const slides = document.querySelectorAll('#hero-slideshow .slide');
+    const dots = document.querySelectorAll('#hero-slideshow .dot');
+    let current = 0;
+    function show(i){
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[i].classList.add('active');
+      dots[i].classList.add('active');
+      current = i;
+    }
+    dots.forEach(dot => dot.addEventListener('click', () => show(+dot.dataset.dot)));
+    setInterval(() => show((current + 1) % slides.length), 4000);
+  })();
+</script>
 </body>
 </html>
