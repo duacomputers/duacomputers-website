@@ -36,7 +36,7 @@ header{
 }
 .logo{display:flex; align-items:center; gap:10px; text-decoration:none;}
 .logo-mark{
-  width:34px; height:34px; border-radius:8px;
+  width:36px; height:36px; border-radius:8px;
   background:linear-gradient(135deg,var(--ink),var(--ink-soft));
   display:flex; align-items:center; justify-content:center; color:var(--blue-light); font-weight:700; font-size:14px;
 }
